@@ -1,12 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing; border-box;
+}
+
 body {
-    background-image: url(https://uploads.metropoles.com/wp-content/uploads/2020/05/06134805/lady-gaga-novo-%C3%A1lbum.jpg);
+    background-image: url('../img/fundo.jpg');
     background-size: auto 100vh;
     font-family: Arial; 
-    height: 100vh
+    height: 100vh;
+    font-size: 12;
+  }
+
+  /* se a tela tiver pelo menos 400px vai carregar esses estilos*/
+  @media (min-width: 400px) {
+    body {
+      font-size: 14px;
+    }
+  }
+
+  /*breakpoints*/
+  @media (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+  }
+
+  /*breakpoints*/
+  @media (min-width: 1200px) {
+    body {
+      font-size: 22px;
+    }
   }
   
+header {
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
   .menu{
     background-color: pink;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+  }
+
+  .menu a{
+    display: block;
+    padding: 10px 20px;
   }
   
   .menu ul {
@@ -29,10 +72,24 @@ body {
   
   .site-title,
   .site-subtitle {
-    color: deeppink;
+    color: rgb(255, 2, 179);
     text-align:center;
+  }
+
+
   }
   
   .site-subtitle {
     font-style: italic;
   }
+
+ .site-btitle {
+   text-align: center;
+   color: rgb(230, 0, 96)
+ }
+
+  .img-portfolio {
+    height: 200px;
+    width: 200px;
+  }
+
