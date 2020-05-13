@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>𝕮𝖍𝖗𝖔𝖒𝖆𝖙𝖎𝖈𝖆💓⚔️</title>
   <link rel="stylesheet" href="css/estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@500&family=Source+Code+Pro&display=swap" rel="stylesheet"
 </head>
 <body>
   <header>
@@ -27,8 +28,10 @@
     </div>
     
   </header>
-  <section>
+  <section class="portfolio">
     <h2>𝕮𝖍𝖗𝖔𝖒𝖆𝖙𝖎𝖈𝖆 ERA</h2>
+
+    <div class="grid">
     <figure>
       <img class="img-portfolio" src="./img/simb.png" alt="Welcome to 𝕮𝖍𝖗𝖔𝖒𝖆𝖙𝖎𝖈𝖆 ">
       <figcaption>Welcome to 𝕮𝖍𝖗𝖔𝖒𝖆𝖙𝖎𝖈𝖆</figcaption>
@@ -41,6 +44,7 @@
       <img class="img-portfolio" src="./img/TRACKLIST.png" alt="TRACKLIST">
       <figcaption>TRACKLIST</figcaption>
     </figure>
+  </div>
   </section>
   <center><div style="color:#ff009d; font-size: 30px; font-weight: normal" id="dday"></div></center>
 
@@ -64,7 +68,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("dday").innerHTML = days + "𝕯𝖎𝖆𝖘 " + hours + "𝕳𝖔𝖗𝖆𝖘 "
+  document.getElementById("dday").innerHTML = days + "𝕯𝖎𝖆𝖘 " + hours + "𝖍𝖔𝖗𝖆𝖘 "
   + minutes + "𝖒𝖎𝖓 " + seconds + "𝖘 ";
 
   // If the count down is finished, write some text 
