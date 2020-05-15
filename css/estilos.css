@@ -1,15 +1,16 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing; border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url('../img/fundoo.png');
+    background-color: #10784f;
+    /*background-image: url('../img/fundoo.png');*/
     background-size: auto 100vh;
     font-family: 'Raleway', sans-serif;
     height: 100vh;
-    font-size: 12;
+    font-size: 12px;
   }
 
   /* se a tela tiver pelo menos 400px vai carregar esses estilos*/
@@ -29,7 +30,7 @@ body {
   /*breakpoints*/
   @media (min-width: 1200px) {
     body {
-      font-size: 22px;
+      font-size: 20px;
     }
   }
   
@@ -45,13 +46,21 @@ header {
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 1;
   }
 
   .menu a{
     display: block;
     padding: 10px 20px;
+    transition: background-color 5s, color 2s;
   }
-  
+
+  .menu a:active,
+  .menu a:hover {
+    background-color: teal;
+    color:pink ;
+  }
+
   .menu ul {
     display: flex;
     justify-content: space-around;
@@ -69,38 +78,58 @@ header {
   a:hover {
     text-decoration: underline;
   }
+
+  .titulo {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: 1s ease 2s animacaoTitulo forwards;
+  }
+
+  @keyframes animacaoTitulo {
+    from {
+      transform: scale(0.2) translateY(50vh);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+
   
   .site-title,
   .site-subtitle {
-    color: rgb(255, 2, 179);
+    color:#ff636c;
     text-align:center;
   }
 
   .site-title{
+    font-size: 4em;
     font-family: 'Source Code Pro', monospace;
   }
   
   .site-subtitle {
     font-style: italic;
-    line-height: 2.5;
+    line-height: 1.8;
   }
 
  .site-btitle {
    text-align: center;
-   color: rgb(230, 0, 96)
+   color:#ff636c;
  }
 
 .portfolio {
    padding: 2em;
-   color: purple;
-   margin-bottom: 1.5em;
-   font-size: 2em;
-   height: 100vh;
+   color: #ff636c;
+   min-height: 100vh;
  }
 
+ .contato h2,
  .portfolio h2 {
   font-family: 'Source Code Pro', monospace;
-  color: purple;
+  color: #ff636c;
+  margin-bottom: 1.5em;
+  font-size: 2em;
  }
 
  .portfolio .grid {
@@ -110,17 +139,18 @@ header {
 
  @media (min-width: 560px) {
   .portfolio .grid {
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 240px 240px;
   }
- }
+}
 
- @media (min-width: 880px) {
+@media (min-width: 880px) {
   .portfolio .grid {
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
     justify-content: center;
-    height: calc(100vh - 4em - 48px - 1.5em);
+    height: calc(100vh - 8em - 48px);
   }
- }
+}
 
  .portfolio figure {
    text-align: center;
@@ -128,13 +158,38 @@ header {
 
  .img-portfolio {
     height: 180px;
-    width: 200px;
+    width: 240px;
+    object-position: left bottom;
+    transition: transform 500ms;
   }
 
- @media (min-width: 1200px) {
-  .img-portfolio {
-    height: 10em;
-    width: auto;
+  .img-portfolio:hover {
+    transform: scale(1.2) rotateX(-2deg);
   }
- }  
+
+  .contato .icons {
+    text-align: center;
+  }
+
+  .contato a {
+    color:  #ff636c;
+    font-size: 4em;
+    transition: text-shadow 1s;
+  }
+
+  .contato a:active,
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(255,255,255,.5);
+  }
+
+  .countdown {
+    color:  #ff636c;
+    text-align: center;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
